@@ -39,6 +39,18 @@ class StringEquality{
             System.out.println("String are not equal.");
     }
 }
+
+class DifferentVariables{
+    static int num = 3;
+    int methodVariable(){
+        return num;
+    }
+
+    void method(){
+        int num = 90;
+        System.out.println(num);
+    }
+}
 public class Assignment {
     public static void main(String[] args) {
         System.out.println("Welcome to Day 1 practice problem.");
@@ -50,5 +62,21 @@ public class Assignment {
         // Check the string equality
         StringEquality stringEquality = new StringEquality();
         stringEquality.checkStringEquality();
+
+        // Demonstrate static variables, methods, and blocks.
+        DifferentVariables variables = new DifferentVariables();
+
+        // static variable is defined by using static keyword & you can't declare it inside the body of the method.
+        System.out.println(variables.methodVariable());
+
+        // instance/block variable is defined inside the class but outside the body of the method.
+        {
+            int num = 22;
+            System.out.println(num);
+        }
+        System.out.println(DifferentVariables.num);
+
+        // Local variable
+        variables.method();
     }
 }
