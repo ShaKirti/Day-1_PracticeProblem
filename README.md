@@ -1,1 +1,1 @@
-This is Day - 1 practice problem program.
+This is Day - 1 practice problem program. 
