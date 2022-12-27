@@ -78,5 +78,15 @@ public class Assignment {
 
         // Local variable
         variables.method();
+
+        // Leap year program
+        System.out.println("Enter year:");
+        int year = new Scanner(System.in).nextInt();
+
+        if (((year%4==0) && (year%100!=0)) ||(year%400==0)){
+            System.out.println("Leap year");
+        }
+        else
+            System.out.println("Not leap year");
     }
 }
